@@ -133,6 +133,16 @@ namespace Project3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap netflix {
+            get {
+                object obj = ResourceManager.GetObject("netflix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap no_strings_attached {
             get {
                 object obj = ResourceManager.GetObject("no_strings_attached", resourceCulture);

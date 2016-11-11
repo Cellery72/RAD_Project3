@@ -8,6 +8,9 @@ namespace Project3
 {
     static class Program
     {
+        public static Movie MovieSelection;
+        public static double TotalCost;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +19,7 @@ namespace Project3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectionForm());
+            Application.Run(new SplashForm());
         }
     }
 }

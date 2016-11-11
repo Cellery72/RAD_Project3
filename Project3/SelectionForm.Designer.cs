@@ -32,13 +32,14 @@
             this.LabelCurrentMovies = new System.Windows.Forms.Label();
             this.LabelTitle = new System.Windows.Forms.Label();
             this.GroupBoxSelection = new System.Windows.Forms.GroupBox();
-            this.PictureBoxMovie = new System.Windows.Forms.PictureBox();
             this.TextBoxCost = new System.Windows.Forms.TextBox();
             this.TextBoxTitle = new System.Windows.Forms.TextBox();
             this.TextBoxCategory = new System.Windows.Forms.TextBox();
             this.LabelCost = new System.Windows.Forms.Label();
             this.LabelCategory = new System.Windows.Forms.Label();
             this.LabelMovieTitle = new System.Windows.Forms.Label();
+            this.PictureBoxMovie = new System.Windows.Forms.PictureBox();
+            this.ButtonNext = new System.Windows.Forms.Button();
             this.GroupBoxSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMovie)).BeginInit();
             this.SuspendLayout();
@@ -69,11 +70,11 @@
             // 
             this.LabelTitle.AutoSize = true;
             this.LabelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTitle.Location = new System.Drawing.Point(57, 19);
+            this.LabelTitle.Location = new System.Drawing.Point(138, 35);
             this.LabelTitle.Name = "LabelTitle";
-            this.LabelTitle.Size = new System.Drawing.Size(436, 24);
+            this.LabelTitle.Size = new System.Drawing.Size(427, 24);
             this.LabelTitle.TabIndex = 3;
-            this.LabelTitle.Text = "Choose the movies to STREAM from the list below!";
+            this.LabelTitle.Text = "Choose the movie to STREAM from the list below!";
             // 
             // GroupBoxSelection
             // 
@@ -92,19 +93,11 @@
             this.GroupBoxSelection.TabStop = false;
             this.GroupBoxSelection.Text = "Your Selection";
             // 
-            // PictureBoxMovie
-            // 
-            this.PictureBoxMovie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PictureBoxMovie.Location = new System.Drawing.Point(6, 24);
-            this.PictureBoxMovie.Name = "PictureBoxMovie";
-            this.PictureBoxMovie.Size = new System.Drawing.Size(153, 193);
-            this.PictureBoxMovie.TabIndex = 7;
-            this.PictureBoxMovie.TabStop = false;
-            // 
             // TextBoxCost
             // 
             this.TextBoxCost.Location = new System.Drawing.Point(351, 123);
             this.TextBoxCost.Name = "TextBoxCost";
+            this.TextBoxCost.ReadOnly = true;
             this.TextBoxCost.Size = new System.Drawing.Size(95, 22);
             this.TextBoxCost.TabIndex = 6;
             // 
@@ -112,6 +105,7 @@
             // 
             this.TextBoxTitle.Location = new System.Drawing.Point(174, 52);
             this.TextBoxTitle.Name = "TextBoxTitle";
+            this.TextBoxTitle.ReadOnly = true;
             this.TextBoxTitle.Size = new System.Drawing.Size(272, 22);
             this.TextBoxTitle.TabIndex = 5;
             // 
@@ -119,6 +113,7 @@
             // 
             this.TextBoxCategory.Location = new System.Drawing.Point(174, 123);
             this.TextBoxCategory.Name = "TextBoxCategory";
+            this.TextBoxCategory.ReadOnly = true;
             this.TextBoxCategory.Size = new System.Drawing.Size(147, 22);
             this.TextBoxCategory.TabIndex = 4;
             // 
@@ -149,17 +144,44 @@
             this.LabelMovieTitle.TabIndex = 1;
             this.LabelMovieTitle.Text = "Title";
             // 
+            // PictureBoxMovie
+            // 
+            this.PictureBoxMovie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PictureBoxMovie.Location = new System.Drawing.Point(6, 24);
+            this.PictureBoxMovie.Name = "PictureBoxMovie";
+            this.PictureBoxMovie.Size = new System.Drawing.Size(153, 193);
+            this.PictureBoxMovie.TabIndex = 7;
+            this.PictureBoxMovie.TabStop = false;
+            // 
+            // ButtonNext
+            // 
+            this.ButtonNext.Enabled = false;
+            this.ButtonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonNext.Location = new System.Drawing.Point(595, 350);
+            this.ButtonNext.Name = "ButtonNext";
+            this.ButtonNext.Size = new System.Drawing.Size(95, 23);
+            this.ButtonNext.TabIndex = 5;
+            this.ButtonNext.Text = "Next";
+            this.ButtonNext.UseVisualStyleBackColor = true;
+            this.ButtonNext.Click += new System.EventHandler(this.ButtonNext_Click);
+            // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 367);
+            this.ClientSize = new System.Drawing.Size(747, 385);
+            this.Controls.Add(this.ButtonNext);
             this.Controls.Add(this.GroupBoxSelection);
             this.Controls.Add(this.LabelTitle);
             this.Controls.Add(this.LabelCurrentMovies);
             this.Controls.Add(this.ListBoxCurrentMovies);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SelectionForm";
-            this.Text = "Notflix";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Notflix the Streaming Service";
             this.GroupBoxSelection.ResumeLayout(false);
             this.GroupBoxSelection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMovie)).EndInit();
@@ -181,6 +203,7 @@
         private System.Windows.Forms.Label LabelCategory;
         private System.Windows.Forms.Label LabelMovieTitle;
         private System.Windows.Forms.PictureBox PictureBoxMovie;
+        private System.Windows.Forms.Button ButtonNext;
     }
 }
 
